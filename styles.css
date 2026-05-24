@@ -133,22 +133,22 @@ a {
 }
 
 .brand-mark {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   border: 1px solid rgba(255, 214, 111, 0.5);
   border-radius: 8px;
   display: grid;
   place-items: center;
-  background:
-    radial-gradient(circle at 50% 22%, rgba(255, 214, 111, 0.65), transparent 30%),
-    linear-gradient(145deg, var(--ember), var(--gold));
+  background: rgba(0, 0, 0, 0.18);
   box-shadow: 0 0 28px rgba(239, 90, 36, 0.38);
+  overflow: hidden;
 }
 
-.brand-mark span {
-  font-family: "Bebas Neue", Impact, sans-serif;
-  font-size: 22px;
-  color: #25090d;
+.brand-mark img {
+  width: 120%;
+  height: 120%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.32));
 }
 
 .brand strong {
@@ -272,6 +272,30 @@ a {
   inset: 0;
   z-index: -1;
   overflow: hidden;
+}
+
+.hero-laurel-bg,
+.hero-cross-bg {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-laurel-bg {
+  right: max(-80px, calc((100vw - 1320px) / 2));
+  top: 2%;
+  width: min(560px, 42vw);
+  opacity: 0.34;
+  filter: drop-shadow(0 28px 72px rgba(0, 0, 0, 0.45));
+}
+
+.hero-cross-bg {
+  right: 22%;
+  bottom: -18%;
+  width: min(520px, 40vw);
+  opacity: 0.2;
+  transform: rotate(-10deg);
+  filter: drop-shadow(0 24px 80px rgba(255, 214, 111, 0.18));
 }
 
 .flame-core {
@@ -508,25 +532,18 @@ h3 {
 }
 
 .campaign-seal {
-  width: min(260px, 60vw);
+  width: min(360px, 64vw);
   aspect-ratio: 1;
-  margin: 0 auto 8px;
-  border: 1px solid rgba(255, 214, 111, 0.32);
-  border-radius: 50%;
+  margin: 0 auto -6px;
   display: grid;
   place-items: center;
-  background:
-    radial-gradient(circle at 50% 26%, rgba(255, 214, 111, 0.34), transparent 30%),
-    linear-gradient(150deg, rgba(239, 90, 36, 0.46), rgba(18, 58, 51, 0.42));
-  box-shadow: 0 0 80px rgba(239, 90, 36, 0.3);
+  filter: drop-shadow(0 26px 58px rgba(0, 0, 0, 0.55));
 }
 
-.campaign-seal span {
-  font-family: "Bebas Neue", Impact, sans-serif;
-  font-size: 122px;
-  color: var(--gold-bright);
-  line-height: 1;
-  text-shadow: 0 0 28px rgba(255, 214, 111, 0.32);
+.campaign-seal img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .ticket-card {
@@ -546,6 +563,7 @@ h3 {
 
 .split-section,
 .leaders-section,
+.identity-section,
 .diagnostic-section,
 .services,
 .timeline-section,
@@ -571,6 +589,13 @@ h3 {
   padding-left: 28px;
 }
 
+.manifesto-mark {
+  display: block;
+  width: min(210px, 58vw);
+  margin: -8px 0 24px;
+  filter: drop-shadow(0 20px 44px rgba(0, 0, 0, 0.45));
+}
+
 .manifesto-copy blockquote {
   margin: 24px 0 0;
   font-family: "Crimson Pro", Georgia, serif;
@@ -583,6 +608,62 @@ h3 {
 .service-intro {
   max-width: 850px;
   margin-bottom: 34px;
+}
+
+.identity-section {
+  position: relative;
+}
+
+.identity-section::before {
+  content: "";
+  position: absolute;
+  inset: 24px auto auto 50%;
+  width: min(820px, 86vw);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(255, 214, 111, 0.42), transparent);
+}
+
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.identity-card {
+  min-width: 0;
+  min-height: 320px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: end;
+  justify-items: center;
+  padding: 22px;
+  background:
+    radial-gradient(circle at 50% 34%, rgba(255, 214, 111, 0.16), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.035));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.identity-card img {
+  width: 100%;
+  max-height: 245px;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 44px rgba(0, 0, 0, 0.5));
+}
+
+.identity-card span {
+  width: 100%;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 214, 111, 0.18);
+  color: var(--gold-bright);
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .tag {
@@ -770,12 +851,9 @@ h3 {
     margin: 0;
   }
 
-  .campaign-seal span {
-    font-size: 100px;
-  }
-
   .leader-stack,
   .diagnostic-grid,
+  .identity-grid,
   .timeline {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -821,6 +899,7 @@ h3 {
   }
 
   .split-section,
+  .identity-section,
   .leader-card,
   .contact-card {
     grid-template-columns: 1fr;
@@ -836,7 +915,7 @@ h3 {
   }
 
   .campaign-seal {
-    width: min(260px, 100%);
+    width: min(320px, 100%);
   }
 
   .manifesto-copy {
@@ -846,6 +925,7 @@ h3 {
 
   .split-section,
   .leaders-section,
+  .identity-section,
   .diagnostic-section,
   .services,
   .timeline-section,
@@ -878,6 +958,11 @@ h3 {
 
   .brand strong {
     font-size: 13px;
+  }
+
+  .brand-mark {
+    width: 44px;
+    height: 44px;
   }
 
   .menu-btn {
@@ -945,7 +1030,7 @@ h3 {
   }
 
   .hero-panel {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 8px;
   }
 
@@ -959,6 +1044,20 @@ h3 {
 
   .hero-panel .ticket-card p {
     display: none;
+  }
+
+  .hero-laurel-bg {
+    right: -150px;
+    top: 1%;
+    width: 440px;
+    opacity: 0.18;
+  }
+
+  .hero-cross-bg {
+    right: -58px;
+    bottom: 14%;
+    width: 300px;
+    opacity: 0.14;
   }
 
   .mini-stat {
@@ -976,6 +1075,7 @@ h3 {
 
   .split-section,
   .leaders-section,
+  .identity-section,
   .diagnostic-section,
   .services,
   .timeline-section,
@@ -985,6 +1085,7 @@ h3 {
   }
 
   .diagnostic-grid,
+  .identity-grid,
   .timeline {
     grid-template-columns: 1fr;
   }
@@ -992,6 +1093,7 @@ h3 {
   .leader-card,
   .service-card,
   .diagnostic-card,
+  .identity-card,
   .timeline article,
   .contact-card,
   .ticket-card {
@@ -1000,6 +1102,14 @@ h3 {
 
   .leader-photo {
     min-height: 172px;
+  }
+
+  .identity-card {
+    min-height: 260px;
+  }
+
+  .identity-card img {
+    max-height: 195px;
   }
 
   .footer {
