@@ -1,5 +1,9 @@
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+/* ============================================================================
+   REVEAL ANIMATIONS
+   ============================================================================ */
+
 const revealElements = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver((entries) => {
@@ -15,6 +19,10 @@ if ('IntersectionObserver' in window) {
 } else {
   revealElements.forEach((element) => element.classList.add('is-visible'));
 }
+
+/* ============================================================================
+   NAVIGATION
+   ============================================================================ */
 
 const topbar = document.querySelector('.topbar');
 const menuButton = document.querySelector('.menu-btn');
@@ -49,6 +57,10 @@ window.addEventListener('scroll', () => {
   topbar?.classList.toggle('scrolled', window.scrollY > 30);
 }, { passive: true });
 
+/* ============================================================================
+   SECTION NAVIGATION - ACTIVE LINK
+   ============================================================================ */
+
 const sections = document.querySelectorAll('[data-section]');
 if ('IntersectionObserver' in window && sections.length) {
   const sectionObserver = new IntersectionObserver((entries) => {
@@ -70,6 +82,10 @@ if ('IntersectionObserver' in window && sections.length) {
   sections.forEach((section) => sectionObserver.observe(section));
 }
 
+/* ============================================================================
+   CURSOR GLOW
+   ============================================================================ */
+
 const cursorGlow = document.getElementById('cursorGlow');
 if (cursorGlow && !prefersReducedMotion) {
   window.addEventListener('pointermove', (event) => {
@@ -77,6 +93,10 @@ if (cursorGlow && !prefersReducedMotion) {
     cursorGlow.style.top = `${event.clientY}px`;
   }, { passive: true });
 }
+
+/* ============================================================================
+   PARTICLE ANIMATION
+   ============================================================================ */
 
 const canvas = document.getElementById('particleCanvas');
 if (canvas && !prefersReducedMotion) {
