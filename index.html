@@ -52,6 +52,7 @@
     </header>
 
     <main class="page-shell" id="conteudo">
+      <!-- HERO SECTION -->
       <section class="hero" id="inicio" data-section>
         <div class="hero-backdrop" aria-hidden="true">
           <div class="flame-core"></div>
@@ -59,72 +60,91 @@
           <div class="flame-ring ring-two"></div>
         </div>
 
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><i></i> Chapa candidata ao Gabinete Nacional 2026/2027</p>
-          <h1>Base acesa, Brasil em movimento.</h1>
-          <p>
-            A Chama DeMolay nasce para aproximar o Gabinete Nacional dos Capítulos,
-            fortalecer a formação dos jovens e transformar escuta em entrega concreta.
-          </p>
+        <div class="hero-container">
+          <!-- LEFT COLUMN -->
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><i></i> Chapa candidata ao Gabinete Nacional 2026/2027</p>
+            <h1>Base acesa, Brasil em movimento.</h1>
+            <p>
+              A Chama DeMolay nasce para aproximar o Gabinete Nacional dos Capítulos,
+              fortalecer a formação dos jovens e transformar escuta em entrega concreta.
+            </p>
 
-          <div class="hero-actions">
-            <a href="#comunidade" class="btn btn-hot">Entrar na comunidade</a>
-            <a href="#propostas" class="btn btn-soft">Ver propostas</a>
+            <div class="hero-actions">
+              <a href="#comunidade" class="btn btn-hot">Entrar na comunidade</a>
+              <a href="#propostas" class="btn btn-soft">Ver propostas</a>
+            </div>
+
+            <div class="metric-row" aria-label="Dados de contexto da candidatura">
+              <article class="mini-stat">
+                <small>Ordem DeMolay</small>
+                <strong>12 a 21</strong>
+                <span>Formação cívica e social de jovens.</span>
+              </article>
+              <article class="mini-stat">
+                <small>Decisão</small>
+                <strong>Capítulos</strong>
+                <span>Base representada por jovens e adultos.</span>
+              </article>
+              <article class="mini-stat">
+                <small>Rumo</small>
+                <strong>100 dias</strong>
+                <span>Escuta, ferramenta e prestação de contas.</span>
+              </article>
+            </div>
           </div>
 
-          <div class="metric-row" aria-label="Dados de contexto da candidatura">
-            <article class="mini-stat">
-              <small>Ordem DeMolay</small>
-              <strong>12 a 21</strong>
-              <span>Formação cívica e social de jovens.</span>
-            </article>
-            <article class="mini-stat">
-              <small>Decisão</small>
-              <strong>Capítulos</strong>
-              <span>Base representada por jovens e adultos.</span>
-            </article>
-            <article class="mini-stat">
-              <small>Rumo</small>
-              <strong>100 dias</strong>
-              <span>Escuta, ferramenta e prestação de contas.</span>
-            </article>
-          </div>
-        </div>
+          <!-- RIGHT COLUMN - PANEL -->
+          <aside class="hero-panel reveal" aria-label="Resumo da chapa">
+            <div class="campaign-seal-wrapper">
+              <div class="campaign-seal">
+                <img src="assets/seal.svg" alt="Emblema Chama DeMolay" class="seal-image" width="280" height="280" loading="lazy">
+              </div>
+            </div>
 
-        <aside class="hero-panel reveal" aria-label="Resumo da chapa">
-          <div class="campaign-seal">
-            <span>CH</span>
-          </div>
-          <article class="ticket-card">
-            <span>MCN</span>
-            <h2>Leonardo Reffatti</h2>
-            <p>Experiência nacional, continuidade institucional e foco em execução.</p>
-          </article>
-          <article class="ticket-card accent">
-            <span>MCN Adjunto</span>
-            <h2>João Gabriel Antunes Fronza</h2>
-            <p>Energia jovem, base capitular e protagonismo de resultado.</p>
-          </article>
-        </aside>
-      </section>
-
-      <section class="manifesto split-section" id="manifesto" data-section>
-        <div class="section-kicker reveal">
-          <p class="eyebrow"><i></i> Manifesto</p>
-          <h2>Não é sobre ocupar um cargo. É sobre assumir uma responsabilidade.</h2>
-        </div>
-        <div class="manifesto-copy reveal">
-          <p>
-            A Ordem cresce quando o Capítulo funciona. Por isso, o plano parte da ponta:
-            Mestres Conselheiros, Conselhos Consultivos, Gabinetes Estaduais, Priorados,
-            Castelos, Alumni, Maçonaria e famílias.
-          </p>
-          <blockquote>
-            Presença que escuta. Método que entrega. Comunidade que constrói.
-          </blockquote>
+            <article class="ticket-card">
+              <span>MCN</span>
+              <h2>Leonardo Reffatti</h2>
+              <p>Experiência nacional, continuidade institucional e foco em execução.</p>
+            </article>
+            <article class="ticket-card accent">
+              <span>MCN Adjunto</span>
+              <h2>João Gabriel Antunes Fronza</h2>
+              <p>Energia jovem, base capitular e protagonismo de resultado.</p>
+            </article>
+          </aside>
         </div>
       </section>
 
+      <!-- MANIFESTO SECTION -->
+      <section class="manifesto" id="manifesto" data-section>
+        <div class="manifesto-container">
+          <!-- LEFT SIDE -->
+          <div class="manifesto-copy reveal">
+            <p class="eyebrow"><i></i> Manifesto</p>
+            <h2>Não é sobre ocupar um cargo. É sobre assumir uma responsabilidade.</h2>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div class="manifesto-content reveal">
+            <div class="manifesto-seal">
+              <img src="assets/seal-small.svg" alt="Emblema" class="seal-icon" width="200" height="200" loading="lazy">
+            </div>
+            <div class="manifesto-text">
+              <p>
+                A Ordem cresce quando o Capítulo funciona. Por isso, o plano parte da ponta:
+                Mestres Conselheiros, Conselhos Consultivos, Gabinetes Estaduais, Priorados,
+                Castelos, Alumni, Maçonaria e famílias.
+              </p>
+              <blockquote>
+                Presença que escuta. Método que entrega. Comunidade que constrói.
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHAPA SECTION (Leaders) -->
       <section class="leaders-section" id="chapa" data-section>
         <div class="service-intro reveal">
           <span class="tag">Chapa</span>
@@ -140,7 +160,7 @@
             <div class="leader-photo">
               <img src="assets/leonardo-reffatti-card.svg" alt="Leonardo Reffatti" class="leader-img" width="260" height="420" loading="lazy">
             </div>
-            <div>
+            <div class="leader-info">
               <span>MCN</span>
               <h3>Leonardo Reffatti</h3>
               <p>Trajetória em Capítulo, Castelo, Priorado, Gabinete Estadual e Gabinete Nacional.</p>
@@ -159,7 +179,7 @@
             <div class="leader-photo">
               <img src="assets/fronza.jpg" alt="João Gabriel Antunes Fronza" class="leader-img" width="260" height="420" loading="lazy">
             </div>
-            <div>
+            <div class="leader-info">
               <span>MCN Adjunto</span>
               <h3>João Gabriel Antunes Fronza</h3>
               <p>Liderança jovem, competitiva e premiada, com atuação capitular, estadual e nacional.</p>
@@ -176,6 +196,44 @@
         </div>
       </section>
 
+      <!-- SYMBOLS SECTION - NEW -->
+      <section class="symbols-section" id="simbolos" data-section>
+        <div class="service-intro reveal">
+          <h2>Elementos oficiais para uma campanha com presença.</h2>
+          <p>
+            O brasão, os louros e a cruz da campanha reforçam tradição, conquista, serviço e a chama que move a base nacional.
+          </p>
+        </div>
+
+        <div class="symbols-grid">
+          <article class="symbol-card reveal">
+            <div class="symbol-image">
+              <img src="assets/brasao.svg" alt="Brasão" width="160" height="160" loading="lazy">
+            </div>
+            <h3>Brasão</h3>
+          </article>
+          <article class="symbol-card reveal">
+            <div class="symbol-image">
+              <img src="assets/louros.svg" alt="Louros" width="160" height="160" loading="lazy">
+            </div>
+            <h3>Louros</h3>
+          </article>
+          <article class="symbol-card reveal">
+            <div class="symbol-image">
+              <img src="assets/cruz.svg" alt="Cruz" width="160" height="160" loading="lazy">
+            </div>
+            <h3>Cruz</h3>
+          </article>
+          <article class="symbol-card reveal">
+            <div class="symbol-image">
+              <img src="assets/emblema.svg" alt="Emblema" width="160" height="160" loading="lazy">
+            </div>
+            <h3>Emblema</h3>
+          </article>
+        </div>
+      </section>
+
+      <!-- DIAGNOSTIC SECTION -->
       <section class="diagnostic-section" id="diagnostico" data-section>
         <div class="service-intro reveal">
           <span class="tag">Diagnóstico</span>
@@ -210,6 +268,7 @@
         </div>
       </section>
 
+      <!-- BASES SECTION -->
       <section class="services" id="bases" data-section>
         <div class="service-intro reveal">
           <span class="tag">Bases de governo</span>
@@ -254,6 +313,7 @@
         </div>
       </section>
 
+      <!-- PROPOSALS SECTION -->
       <section class="services proposals" id="propostas" data-section>
         <div class="service-intro reveal">
           <span class="tag">Propostas</span>
@@ -295,6 +355,7 @@
         </div>
       </section>
 
+      <!-- TIMELINE SECTION -->
       <section class="timeline-section" id="100dias" data-section>
         <div class="service-intro reveal">
           <span class="tag">Primeiros 100 dias</span>
@@ -326,6 +387,7 @@
         </div>
       </section>
 
+      <!-- COMMUNITY SECTION -->
       <section class="contact" id="comunidade" data-section>
         <div class="contact-card reveal">
           <div>
